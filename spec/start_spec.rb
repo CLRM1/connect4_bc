@@ -12,17 +12,23 @@ describe Game do
 
     it "can print an empty game board" do
       game = Game.new
-      expect(game.board).to eq("ABCDEFG\n.......\n.......\n.......\n.......\n.......\n.......")
+      expect(game.board).to eq(["ABCDEFG", ".......", ".......", ".......", ".......", ".......", "......."])
     end
   end
 
-  describe '# Start' do
-    it 'can print a welcome message' do
-      game = Game.new
-      expect(game.start).to eq("Welcome to connect 4!\nABCDEFG\n.......\n.......\n.......\n.......\n.......\n.......")
-
-    end
-  end
+#   describe '# Start' do
+#     it 'can print a welcome message' do
+#       game = Game.new
+#       expect(game.start).to eq(["Welcome to connect 4!",
+# "ABCDEFG",
+# ".......",
+# ".......",
+# ".......",
+# ".......",
+# ".......",
+# "......."])
+#     end
+#   end
 
 
 
