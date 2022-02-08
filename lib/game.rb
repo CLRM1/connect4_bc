@@ -1,23 +1,32 @@
 require 'pry'
 
 class Game
-attr_reader :board
+attr_reader :board, :player1, :player2
 
   def initialize
     # @board = "ABCDEFG\n.......\n.......\n.......\n.......\n.......\n......."
-    @board = ["ABCDEFG", ".......", ".......", ".......", ".......", ".......", "......."]
+    @player1 = player1
+    @player2 = player2
+    @board = [
+      ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+      ['.', '.', '.', '.', '.', '.', '.'],
+      ['.', '.', '.', '.', '.', '.', '.'],
+      ['.', '.', '.', '.', '.', '.', '.'],
+      ['.', '.', '.', '.', '.', '.', '.'],
+      ['.', '.', '.', '.', '.', '.', '.'],
+      ['.', '.', '.', '.', '.', '.', '.'],
+    ]
   end
 
   def start
-    p "Welcome to connect 4!"
+    puts "Welcome to connect 4!"
     @board.each do |line|
-      p line
+      puts line.join(' ')
     end
   end
 
-
 end
 
-game = Game.new
-game.start
+# game = Game.new
+# game.start
 # binding.pry
