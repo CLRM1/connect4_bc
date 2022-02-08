@@ -1,15 +1,16 @@
 require 'rspec'
 require './lib/game'
+require './lib/player'
 
 describe Player do
   describe 'add_piece' do
     it 'places a piece in the given row' do
-      game = Game.new
       user_player = Player.new
-      comp_player = PLayer.new
-      game.start(user_player, comp_player)
+      comp_player = Player.new
+      game = Game.new(user_player, comp_player)
+      game.start
       user_player.add_piece('A')
-      expect(game.board).to eq(['ABCDEFG', '.......', '.......', '.......', '.......', '.......', '.......'])
+      expect(game.board).to eq(['ABCDEFG', '.......', '.......', '.......', '.......', '.......', 'X......'])
     end
   end
 end
