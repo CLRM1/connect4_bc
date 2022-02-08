@@ -9,7 +9,6 @@ describe Game do
       game = Game.new
       expect(game).to be_an_instance_of(Game)
     end
-
     it "contains an empty game board" do
       game = Game.new
       expect(game.board[0]).to eq(['A', 'B', 'C', 'D', 'E', 'F', 'G'])
@@ -17,7 +16,7 @@ describe Game do
   end
 
   describe '# Start' do
-    it 'can print a welcome message' do
+    it 'prints an empty game board' do
       game = Game.new
       expect(game.start).to eq(game.board)
     end
