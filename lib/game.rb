@@ -5,19 +5,18 @@ attr_reader :board
 
   def initialize
     # @board = "ABCDEFG\n.......\n.......\n.......\n.......\n.......\n......."
-    @board = ["ABCDEFG", ".......", ".......", ".......", ".......", ".......", "......."]
+    @board = ['ABCDEFG', '.......', '.......', '.......', '.......', '.......', '.......']
   end
 
   def start
-    p "Welcome to connect 4!"
+    puts "Welcome to connect 4!"
     @board.each do |line|
-      p line
+      puts line
     end
   end
 
-
 end
 
-game = Game.new
-game.start
+# game = Game.new
+# game.start
 # binding.pry
