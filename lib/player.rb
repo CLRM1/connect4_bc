@@ -9,7 +9,7 @@ class Player
 
   def add_piece(column)
     if 'ABCDEFG'.include?(column)
-        @game.board[6][0] = 'X'
+        @game.board[:row6][0] = 'X'
     end
 
   end
