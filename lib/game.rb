@@ -1,6 +1,6 @@
 require 'pry'
-require './lib/game'
 require './lib/space'
+require './lib/player'
 class Game
 attr_reader :board, :player1, :player2
 
@@ -36,3 +36,4 @@ end
 
 # game = Game.new
 # game.start
+binding.pry
