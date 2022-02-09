@@ -1,4 +1,5 @@
 require 'pry'
+require './lib/game'
 require './lib/space'
 class Game
 attr_reader :board, :player1, :player2
