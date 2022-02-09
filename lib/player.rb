@@ -24,15 +24,33 @@ class Player
     elsif column.upcase == 'G'
       column = 6
     end
+
     if column <= 6
       if @game.board[:row6][column].is_empty?
-        game.board[:row6][column].@is_empty = false
-        game.board[:row6][column].symbol
+        game.board[:row6][column].is_empty = false
+
+      elsif @game.board[:row5][column].is_empty?
+        game.board[:row5][column].is_empty = false
+
+      elsif @game.board[:row4][column].is_empty?
+        game.board[:row4][column].is_empty = false
+
+      elsif @game.board[:row3][column].is_empty?
+        game.board[:row3][column].is_empty = false
+
+      elsif @game.board[:row2][column].is_empty?
+        game.board[:row2][column].is_empty = false
+
+      elsif @game.board[:row1][column].is_empty?
+        game.board[:row1][column].is_empty = false
+      else
+        "Column is full. Choose another"
       end
-      return @game.board
+      @game.start
     else
-      "Choose a column (ABCDEFG)"
+      "Invalid column. Choose a column (ABCDEFG)"
     end
 
   end
+
 end

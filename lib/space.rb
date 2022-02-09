@@ -7,7 +7,6 @@ class Space
   def initialize(coords)
     @is_empty = true
     @coords = coords
-    @symbol = ''
   end
 
   def is_empty?
@@ -15,10 +14,10 @@ class Space
   end
 
   def symbol
-    if @is_empty == true
-      @symbol = '.'
+    if is_empty?
+      return '.'
     else
-      @symbol = 'X'
+      return 'X'
     end
   end
 end
