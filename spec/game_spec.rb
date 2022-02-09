@@ -11,7 +11,7 @@ describe Game do
     end
     it "contains an empty game board" do
       game = Game.new
-      expect(game.board[0]).to eq(['A', 'B', 'C', 'D', 'E', 'F', 'G'])
+      expect(game.board[:row0]).to eq(['A', 'B', 'C', 'D', 'E', 'F', 'G'])
     end
   end
 
