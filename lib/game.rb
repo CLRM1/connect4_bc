@@ -34,6 +34,18 @@ attr_reader :board, :player1, :player2
 
 end
 
+
+def board
+  puts "Welcome to connect 4!"
+  puts @board[:row0].join(' ')
+  @board.drop(1).each do |row, spaces|
+    sym_holder = []
+    spaces.each do |space|
+      sym_holder << space.symbol
+    end
+    puts sym_holder.join(' ')
+  end
+end
 # game = Game.new
 # game.start
-binding.pry
+# binding.pry

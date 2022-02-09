@@ -26,13 +26,14 @@ class Player
     end
     if column <= 6
       if @game.board[:row6][column].is_empty?
-        game.board[:row6][column].@is_empty = false
-        game.board[:row6][column].symbol
+        game.board[:row6][column].is_empty?
+        @is_empty = false
+        return game.board[:row6][column] = 'X'
       end
       return @game.board
     else
       "Choose a column (ABCDEFG)"
     end
-
+    puts @game.board
   end
 end
