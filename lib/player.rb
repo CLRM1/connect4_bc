@@ -35,7 +35,12 @@ class Player
     end
 
     if column.class != Integer
+      10.times do
+        puts " "
+      end
       puts "Invalid column. Choose a column (ABCDEFG)"
+      game.print_board
+      add_piece(gets.chomp)
     elsif column <= 6
       if @game.board[:row6][column].is_empty?
         game.board[:row6][column].is_empty = false
@@ -63,6 +68,7 @@ class Player
         game.board[:row1][column].is_empty = false
       else
         puts "Column is full. Choose another"
+        add_piece(gets.chomp)
       end
       # @game.print_board
     end
