@@ -12,4 +12,9 @@ game.print_board
 
 player1 = Player.new(game)
 
-player1.add_piece(gets.chomp)
+until player1.has_won? do
+
+  player1.add_piece(gets.chomp)
+  game.print_board
+
+end

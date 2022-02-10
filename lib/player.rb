@@ -2,7 +2,7 @@ require 'pry'
 require './lib/game'
 
 class Player
-    attr_accessor :game
+    attr_accessor :game, :has_won
   # def initialize
   #   @game = Game.new
   #   # @input = gets.chomp
@@ -10,6 +10,11 @@ class Player
 
   def initialize(game)
     @game = game
+    @has_won = false
+  end
+
+  def has_won?
+    return @has_won
   end
 
   def add_piece(column)
@@ -50,10 +55,12 @@ class Player
       elsif @game.board[:row1][column].is_empty?
         game.board[:row1][column].is_empty = false
       else
-        "Column is full. Choose another"
+        puts "Column is full. Choose another"
       end
-      @game.print_board
+      # @game.print_board
     end
   end
 
 end
+
+# binding.pry
