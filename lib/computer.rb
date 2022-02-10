@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-require './lib/game'
-require './lib/deck'
-require './lib/space'
 
-class Computer
-  attr_accessor :has_won
-  def initialize
-    @has_won = false
-  end
-
-=======
 require './lib/player'
 require './lib/game'
 require './lib/space'
