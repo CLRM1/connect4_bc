@@ -48,7 +48,7 @@ class Player
       else
         "Column is full. Choose another"
       end
-      @game.start
+      @game.print_board
     end
   end
 
