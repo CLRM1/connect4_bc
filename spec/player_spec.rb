@@ -5,7 +5,8 @@ require './lib/player'
 describe Player do
   describe 'add_piece' do
     it 'places a piece in the given row' do
-      user_player = Player.new
+      game = Game.new
+      user_player = Player.new(game)
       user_player.game.print_board
       user_player.add_piece('A')
       spot_1 = user_player.game.board[:row6][0]
@@ -19,7 +20,8 @@ describe Player do
     end
 
     it "can tell if the row is invalid" do
-      user_player = Player.new
+      game = Game.new
+      user_player = Player.new(game)
       user_player.game.print_board
       spot_1 = user_player.game.board[:row6][0]
       spot_2 = user_player.game.board[:row6][1]

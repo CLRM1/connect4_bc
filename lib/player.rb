@@ -39,6 +39,13 @@ class Player
     elsif column <= 6
       if @game.board[:row6][column].is_empty?
         game.board[:row6][column].is_empty = false
+          # experiment 1
+          # if @game.board[:row6][column][0..7] == 'x'
+          #   # each do if necessary ^
+          #   puts "Player1 wins!"
+          # elsif @game.board[:row6][column][0..7] == 'o'
+          #   puts "Player2 wins!"
+          # end
 
       elsif @game.board[:row5][column].is_empty?
         game.board[:row5][column].is_empty = false

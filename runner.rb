@@ -15,10 +15,19 @@ player1 = Player.new(game)
 
 computer = Computer.new(game)
 
+turn_counter = 0
+
 until player1.has_won? do
 
   player1.add_piece(gets.chomp)
   computer.add_piece
+  10.times do
+    puts " "
+  end
+  turn_counter += 1
+  puts " "
+  puts "Round:#{turn_counter}"
+  puts " "
   game.print_board
 
 end
