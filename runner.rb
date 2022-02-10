@@ -10,10 +10,6 @@ game.print_welcome
 
 game.print_board
 
-def input
+player1 = Player.new(game)
 
-
-
-  gets.chomp
-
-end
+player1.add_piece(gets.chomp)

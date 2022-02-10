@@ -3,9 +3,13 @@ require './lib/game'
 
 class Player
     attr_accessor :game
-  def initialize
-    @game = Game.new
-    # @input = gets.chomp
+  # def initialize
+  #   @game = Game.new
+  #   # @input = gets.chomp
+  # end
+
+  def initialize(game)
+    @game = game
   end
 
   def add_piece(column)
@@ -26,7 +30,7 @@ class Player
     end
 
     if column.class != Integer
-      "Invalid column. Choose a column (ABCDEFG)"
+      puts "Invalid column. Choose a column (ABCDEFG)"
     elsif column <= 6
       if @game.board[:row6][column].is_empty?
         game.board[:row6][column].is_empty = false
