@@ -25,7 +25,9 @@ class Player
       column = 6
     end
 
-    if column <= 6
+    if column.class != Integer
+      "Invalid column. Choose a column (ABCDEFG)"
+    elsif column <= 6
       if @game.board[:row6][column].is_empty?
         game.board[:row6][column].is_empty = false
 
@@ -47,10 +49,7 @@ class Player
         "Column is full. Choose another"
       end
       @game.start
-    else
-      "Invalid column. Choose a column (ABCDEFG)"
     end
-
   end
 
 end

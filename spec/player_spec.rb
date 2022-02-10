@@ -18,7 +18,7 @@ describe Player do
       expect(spot_1.symbol).to eq('X')
     end
 
-    xit "can tell if the row is invalid" do
+    it "can tell if the row is invalid" do
       user_player = Player.new
       user_player.game.start
       spot_1 = user_player.game.board[:row6][0]
