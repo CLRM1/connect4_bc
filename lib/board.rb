@@ -30,7 +30,7 @@ attr_reader :board, :player1, :player2
   end
 
   def menu
-    puts "Welcome to CONNECT FOUR!"
+    puts "***Main Menu***"
     puts " "
     puts "Enter p to play. Enter q to quit."
     answer = gets.chomp
