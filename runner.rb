@@ -13,7 +13,6 @@ computer = Computer.new(board)
 turn_counter = 0
 puts "Welcome to Connect 4!"
 puts " "
-
 until board.menu == 'q'
   puts " "
   puts "Choose a column (ABCDEFG)"
@@ -34,5 +33,6 @@ until board.menu == 'q'
     puts " "
   end
 end
+
 
 puts "See you later!"
