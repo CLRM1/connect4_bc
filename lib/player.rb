@@ -363,4 +363,22 @@ class Player
     end
   end
 
+  def check_diagonal_wins
+    diagonal_win_one = [
+      @board.board[:row1][0],
+      @board.board[:row2][1],
+      @board.board[:row3][2],
+      @board.board[:row4][3],
+    ]
+
+    if diagonal_win_one.all?('X')
+      puts "Player 1 wins!"
+      @has_won = true
+    end
+
+
+
+
+
+  end
 end
