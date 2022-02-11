@@ -4,9 +4,7 @@ require './lib/space'
 require './lib/computer'
 require 'pry'
 
-
 board = Board.new
-
 
 player1 = Player.new(board)
 
@@ -17,6 +15,8 @@ puts "Welcome to Connect 4!"
 puts " "
 
 until board.menu == 'q'
+  puts " "
+  puts "Choose a column (ABCDEFG)"
   board.print_board
   until player1.has_won? || computer.has_won? do
 
