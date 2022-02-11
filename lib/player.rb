@@ -11,7 +11,7 @@ class Player
 
   def has_won?
     check_horizontal_wins
-    verticals_wins
+    check_vertical_wins
     return @has_won
   end
 
@@ -71,7 +71,7 @@ class Player
 
   end
 
-  def verticals_wins
+  def check_vertical_wins
     row6_moves = []
     row5_moves = []
     row4_moves = []
