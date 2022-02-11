@@ -1,13 +1,13 @@
 require './lib/player'
-require './lib/game'
+require './lib/board'
 require './lib/space'
 
 
 class Computer
-attr_accessor :game, :has_won
+attr_accessor :board, :has_won
 
-  def initialize(game)
-    @game = game
+  def initialize(board)
+    @board = board
     @has_won = false
   end
 
@@ -18,8 +18,8 @@ attr_accessor :game, :has_won
   end
 
   def add_piece
-    columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-    selection = columns.sample
+    selections = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+    selection = selections.sample
     if selection.upcase == 'A'
       selection = 0
     elsif selection.upcase == 'B'
@@ -39,27 +39,33 @@ attr_accessor :game, :has_won
     if selection.class != Integer
       add_piece
     elsif selection <= 6
-      if @game.board[:row6][selection].is_empty?
-        game.board[:row6][selection].is_empty = false
+      if @board.board[:row6][selection].is_empty?
+        board.board[:row6][selection].is_empty = false
+        board.board[:row6][selection].symbol = 'O'
 
-      elsif @game.board[:row5][selection].is_empty?
-        game.board[:row5][selection].is_empty = false
+      elsif @board.board[:row5][selection].is_empty?
+        board.board[:row5][selection].is_empty = false
+        board.board[:row5][selection].symbol = 'O'
 
-      elsif @game.board[:row4][selection].is_empty?
-        game.board[:row4][selection].is_empty = false
+      elsif @board.board[:row4][selection].is_empty?
+        board.board[:row4][selection].is_empty = false
+        board.board[:row4][selection].symbol = 'O'
 
-      elsif @game.board[:row3][selection].is_empty?
-        game.board[:row3][selection].is_empty = false
+      elsif @board.board[:row3][selection].is_empty?
+        board.board[:row3][selection].is_empty = false
+        board.board[:row3][selection].symbol = 'O'
 
-      elsif @game.board[:row2][selection].is_empty?
-        game.board[:row2][selection].is_empty = false
+      elsif @board.board[:row2][selection].is_empty?
+        board.board[:row2][selection].is_empty = false
+        board.board[:row2][selection].symbol = 'O'
 
-      elsif @game.board[:row1][selection].is_empty?
-        game.board[:row1][selection].is_empty = false
+      elsif @board.board[:row1][selection].is_empty?
+        board.board[:row1][selection].is_empty = false
+        board.board[:row1][selection].symbol = 'O'
       else
-        puts "selection is full. Choose another"
+        add_piece
       end
-      # @game.print_board
+      # @board.print_board
     end
   end
 

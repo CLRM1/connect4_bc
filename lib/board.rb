@@ -1,7 +1,7 @@
 require 'pry'
 require './lib/space'
 require './lib/player'
-class Game
+class Board
 attr_reader :board, :player1, :player2
 
   def initialize
@@ -33,6 +33,8 @@ attr_reader :board, :player1, :player2
 
   def print_welcome
     puts "Welcome to connect 4!"
+    puts "Select a column (ABCDEFG)"
+    puts " "
   end
 
 end
