@@ -1,19 +1,16 @@
 require 'pry'
-require './lib/game'
+require './lib/board'
 
 class Player
-    attr_accessor :game, :has_won
-  # def initialize
-  #   @game = Game.new
-  #   # @input = gets.chomp
-  # end
+    attr_accessor :board, :has_won
 
-  def initialize(game)
-    @game = game
+  def initialize(board)
+    @board = board
     @has_won = false
   end
 
   def has_won?
+    check_horizontal_wins
     return @has_won
   end
 
@@ -35,32 +32,177 @@ class Player
     end
 
     if column.class != Integer
+      10.times do
+        puts " "
+      end
       puts "Invalid column. Choose a column (ABCDEFG)"
+      board.print_board
+      add_piece(gets.chomp)
     elsif column <= 6
-      if @game.board[:row6][column].is_empty?
-        game.board[:row6][column].is_empty = false
+      if @board.board[:row6][column].is_empty?
+        board.board[:row6][column].is_empty = false
+        board.board[:row6][column].symbol = 'X'
 
-      elsif @game.board[:row5][column].is_empty?
-        game.board[:row5][column].is_empty = false
+      elsif @board.board[:row5][column].is_empty?
+        board.board[:row5][column].is_empty = false
+        board.board[:row5][column].symbol = 'X'
 
-      elsif @game.board[:row4][column].is_empty?
-        game.board[:row4][column].is_empty = false
+      elsif @board.board[:row4][column].is_empty?
+        board.board[:row4][column].is_empty = false
+        board.board[:row4][column].symbol = 'X'
 
-      elsif @game.board[:row3][column].is_empty?
-        game.board[:row3][column].is_empty = false
+      elsif @board.board[:row3][column].is_empty?
+        board.board[:row3][column].is_empty = false
+        board.board[:row3][column].symbol = 'X'
 
-      elsif @game.board[:row2][column].is_empty?
-        game.board[:row2][column].is_empty = false
+      elsif @board.board[:row2][column].is_empty?
+        board.board[:row2][column].is_empty = false
+        board.board[:row2][column].symbol = 'X'
 
-      elsif @game.board[:row1][column].is_empty?
-        game.board[:row1][column].is_empty = false
+      elsif @board.board[:row1][column].is_empty?
+        board.board[:row1][column].is_empty = false
+        board.board[:row1][column].symbol = 'X'
       else
         puts "Column is full. Choose another"
+        add_piece(gets.chomp)
       end
-      # @game.print_board
+    end
+
+  end
+
+  def check_horizontal_wins
+    row6_moves = []
+    row5_moves = []
+    row4_moves = []
+    row3_moves = []
+    row2_moves = []
+    row1_moves = []
+
+    @board.board[:row6].each do |cell|
+      row6_moves << cell.symbol
+    end
+
+    if row6_moves[0..3] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row6_moves[1..4] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row6_moves[2..5] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row6_moves[3..6] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row6_moves[4..7] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    end
+
+    @board.board[:row5].each do |cell|
+      row5_moves << cell.symbol
+    end
+
+    if row5_moves[0..3] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row5_moves[1..4] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row5_moves[2..5] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row5_moves[3..6] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row5_moves[4..7] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    end
+
+    @board.board[:row4].each do |cell|
+      row4_moves << cell.symbol
+    end
+
+    if row4_moves[0..3] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row4_moves[1..4] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row4_moves[2..5] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row4_moves[3..6] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row4_moves[4..7] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    end
+
+    @board.board[:row3].each do |cell|
+      row3_moves << cell.symbol
+    end
+
+    if row3_moves[0..3] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row3_moves[1..4] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row3_moves[2..5] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row3_moves[3..6] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row3_moves[4..7] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    end
+
+    @board.board[:row2].each do |cell|
+      row2_moves << cell.symbol
+    end
+
+    if row2_moves[0..3] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row2_moves[1..4] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row2_moves[2..5] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row2_moves[3..6] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row2_moves[4..7] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    end
+
+    @board.board[:row1].each do |cell|
+      row1_moves << cell.symbol
+    end
+
+    if row1_moves[0..3] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row1_moves[1..4] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row1_moves[2..5] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row1_moves[3..6] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
+    elsif row1_moves[4..7] == ['X', 'X', 'X', 'X']
+      puts "Player 1 wins!!"
+      @has_won = true
     end
   end
 
 end
-
-# binding.pry
