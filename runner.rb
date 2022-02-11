@@ -1,23 +1,23 @@
-require './lib/game'
+require './lib/board'
 require './lib/player'
 require './lib/space'
 require './lib/computer'
 require 'pry'
 
 
-game = Game.new
+board = Board.new
 
-game.print_welcome
+board.print_welcome
 
-game.print_board
+board.print_board
 
-player1 = Player.new(game)
+player1 = Player.new(board)
 
-computer = Computer.new(game)
+computer = Computer.new(board)
 
 turn_counter = 0
 
-until player1.has_won? do
+until player1.has_won? || computer.has_won? do
 
   player1.add_piece(gets.chomp)
   computer.add_piece
@@ -26,6 +26,6 @@ until player1.has_won? do
   puts " "
   puts "Round:#{turn_counter}"
   puts " "
-  game.print_board
+  board.print_board
 
 end
