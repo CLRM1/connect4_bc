@@ -17,7 +17,7 @@ computer = Computer.new(board)
 
 turn_counter = 0
 
-until player1.has_won? do
+until player1.has_won? || computer.has_won? do
 
   player1.add_piece(gets.chomp)
   computer.add_piece
