@@ -3,10 +3,6 @@ require './lib/board'
 
 class Player
     attr_accessor :board, :has_won
-  # def initialize
-  #   @board = board.new
-  #   # @input = gets.chomp
-  # end
 
   def initialize(board)
     @board = board
@@ -45,13 +41,6 @@ class Player
       if @board.board[:row6][column].is_empty?
         board.board[:row6][column].is_empty = false
         board.board[:row6][column].symbol = 'X'
-          # experiment 1
-          # if @board.board[:row6][column][0..7] == 'x'
-          #   # each do if necessary ^
-          #   puts "Player1 wins!"
-          # elsif @board.board[:row6][column][0..7] == 'o'
-          #   puts "Player2 wins!"
-        # end
 
       elsif @board.board[:row5][column].is_empty?
         board.board[:row5][column].is_empty = false
@@ -76,10 +65,8 @@ class Player
         puts "Column is full. Choose another"
         add_piece(gets.chomp)
       end
-      # @board.print_board
     end
+
   end
 
 end
-
-# binding.pry

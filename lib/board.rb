@@ -5,7 +5,6 @@ class Board
 attr_reader :board, :player1, :player2
 
   def initialize
-    # @board = "ABCDEFG\n.......\n.......\n.......\n.......\n.......\n......."
     @player1 = player1
     @player2 = player2
     @board = {
@@ -28,7 +27,6 @@ attr_reader :board, :player1, :player2
       end
       puts sym_holder.join(' ')
     end
-
   end
 
   def print_welcome
@@ -36,9 +34,4 @@ attr_reader :board, :player1, :player2
     puts "Select a column (ABCDEFG)"
     puts " "
   end
-
 end
-
-# game = Game.new
-# game.start
-# binding.pry

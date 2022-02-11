@@ -11,8 +11,6 @@ attr_accessor :board, :has_won
     @has_won = false
   end
 
-
-
   def has_won?
     return @has_won
   end
@@ -65,9 +63,6 @@ attr_accessor :board, :has_won
       else
         add_piece
       end
-      # @board.print_board
     end
   end
-
-
 end

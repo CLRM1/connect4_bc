@@ -13,12 +13,4 @@ class Space
   def is_empty?
     return @is_empty
   end
-
-  # def symbol
-  #   if is_empty?
-  #     return '.'
-  #   else
-  #     return 'X'
-  #   end
-  # end
 end
