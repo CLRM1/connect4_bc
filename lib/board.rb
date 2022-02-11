@@ -29,9 +29,20 @@ attr_reader :board, :player1, :player2
     end
   end
 
-  def print_welcome
-    puts "Welcome to connect 4!"
-    puts "Select a column (ABCDEFG)"
+  def menu
+    puts "Welcome to CONNECT FOUR!"
     puts " "
+    puts "Enter p to play. Enter q to quit."
+    answer = gets.chomp
+    answer
+  end
+
+  def print_welcome
+    if menu == 'p'
+      puts "Select a column (ABCDEFG)"
+      puts " "
+    else
+      puts "See you later!"
+    end
   end
 end
