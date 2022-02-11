@@ -1,15 +1,11 @@
 require 'pry'
-require './lib/game'
+require './lib/board'
 
 class Player
-    attr_accessor :game, :has_won
-  # def initialize
-  #   @game = Game.new
-  #   # @input = gets.chomp
-  # end
+    attr_accessor :board, :has_won
 
-  def initialize(game)
-    @game = game
+  def initialize(board)
+    @board = board
     @has_won = false
   end
 
@@ -39,41 +35,38 @@ class Player
         puts " "
       end
       puts "Invalid column. Choose a column (ABCDEFG)"
-      game.print_board
+      board.print_board
       add_piece(gets.chomp)
     elsif column <= 6
-      if @game.board[:row6][column].is_empty?
-        game.board[:row6][column].is_empty = false
-          # experiment 1
-          # if @game.board[:row6][column][0..7] == 'x'
-          #   # each do if necessary ^
-          #   puts "Player1 wins!"
-          # elsif @game.board[:row6][column][0..7] == 'o'
-          #   puts "Player2 wins!"
-          # end
+      if @board.board[:row6][column].is_empty?
+        board.board[:row6][column].is_empty = false
+        board.board[:row6][column].symbol = 'X'
 
-      elsif @game.board[:row5][column].is_empty?
-        game.board[:row5][column].is_empty = false
+      elsif @board.board[:row5][column].is_empty?
+        board.board[:row5][column].is_empty = false
+        board.board[:row5][column].symbol = 'X'
 
-      elsif @game.board[:row4][column].is_empty?
-        game.board[:row4][column].is_empty = false
+      elsif @board.board[:row4][column].is_empty?
+        board.board[:row4][column].is_empty = false
+        board.board[:row4][column].symbol = 'X'
 
-      elsif @game.board[:row3][column].is_empty?
-        game.board[:row3][column].is_empty = false
+      elsif @board.board[:row3][column].is_empty?
+        board.board[:row3][column].is_empty = false
+        board.board[:row3][column].symbol = 'X'
 
-      elsif @game.board[:row2][column].is_empty?
-        game.board[:row2][column].is_empty = false
+      elsif @board.board[:row2][column].is_empty?
+        board.board[:row2][column].is_empty = false
+        board.board[:row2][column].symbol = 'X'
 
-      elsif @game.board[:row1][column].is_empty?
-        game.board[:row1][column].is_empty = false
+      elsif @board.board[:row1][column].is_empty?
+        board.board[:row1][column].is_empty = false
+        board.board[:row1][column].symbol = 'X'
       else
         puts "Column is full. Choose another"
         add_piece(gets.chomp)
       end
-      # @game.print_board
     end
+
   end
 
 end
-
-# binding.pry
