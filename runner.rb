@@ -6,7 +6,7 @@ require 'pry'
 
 game_count = 0
 answer = "p or q"
-while game_count >= 0 
+while game_count >= 0
   board = Board.new
 
   player1 = Player.new(board)
@@ -43,3 +43,6 @@ while game_count >= 0
   end
 
 end
+
+
+puts "See you later!"
