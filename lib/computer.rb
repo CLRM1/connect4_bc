@@ -604,4 +604,5 @@ attr_accessor :board, :has_won
       @has_won = true
     end
   end
+
 end

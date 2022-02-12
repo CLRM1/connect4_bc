@@ -606,4 +606,5 @@ class Player
       @has_won = true
     end
   end
+
 end
