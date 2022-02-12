@@ -29,7 +29,6 @@ while game_count >= 0
       player1.add_piece(gets.chomp)
       computer.add_piece
 
-
       turn_counter += 1
       puts " "
       puts "Round:#{turn_counter}"
@@ -50,5 +49,3 @@ while game_count >= 0
   end
 
 end
-
-puts "See you later!"
