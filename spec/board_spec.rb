@@ -8,6 +8,7 @@ describe Board do
       board = Board.new
       expect(board).to be_an_instance_of(Board)
     end
+
     it "prints a welcome message" do
       board = Board.new
       def print_welcome
@@ -15,9 +16,9 @@ describe Board do
         puts "Select a column (ABCDEFG)"
         puts " "
       end
-      # require 'pry'; binding.pry
       expect(board.print_welcome).to eq(print_welcome)
     end
+    
     it "contains an empty board board" do
       board = Board.new
       expect(board.board[:row0]).to eq(['A', 'B', 'C', 'D', 'E', 'F', 'G'])
