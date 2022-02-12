@@ -24,9 +24,11 @@ class WinChecker
 
     if symbols.none?('.')
       true
+      puts "It's a draw!!"
     else
       false
     end
+
   end
 
   def check_vertical_wins
@@ -42,36 +44,36 @@ class WinChecker
       row6_moves << first_element[0].symbol
     end
 
-    if row6_moves[0..3].all?("X")
+    if row6_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[1..4].all?("X")
+    elsif row6_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[2..5].all?("X")
+    elsif row6_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[3..6].all?("X")
+    elsif row6_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[4..7].all?("X")
+    elsif row6_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row6_moves[0..3].all?("O")
+    if row6_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[1..4].all?("O")
+    elsif row6_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[2..5].all?("O")
+    elsif row6_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[3..6].all?("O")
+    elsif row6_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[4..7].all?("O")
+    elsif row6_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -80,36 +82,36 @@ class WinChecker
     row5_moves << first_element[1].symbol
   end
 
-  if row5_moves[0..3].all?("X")
+  if row5_moves[0..3]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[1..4].all?("X")
+  elsif row5_moves[1..4]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[2..5].all?("X")
+  elsif row5_moves[2..5]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[3..6].all?("X")
+  elsif row5_moves[3..6]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[4..7].all?("X")
+  elsif row5_moves[4..7]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
   end
 
-  if row5_moves[0..3].all?("O")
+  if row5_moves[0..3]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[1..4].all?("O")
+  elsif row5_moves[1..4]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[2..5].all?("O")
+  elsif row5_moves[2..5]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[3..6].all?("O")
+  elsif row5_moves[3..6]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[4..7].all?("O")
+  elsif row5_moves[4..7]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
   end
@@ -118,36 +120,36 @@ class WinChecker
       row4_moves << first_element[2].symbol
     end
 
-    if row4_moves[0..3].all?("X")
+    if row4_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[1..4].all?("X")
+    elsif row4_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[2..5].all?("X")
+    elsif row4_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[3..6].all?("X")
+    elsif row4_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[4..7].all?("X")
+    elsif row4_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row4_moves[0..3].all?("O")
+    if row4_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[1..4].all?("O")
+    elsif row4_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[2..5].all?("O")
+    elsif row4_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[3..6].all?("O")
+    elsif row4_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[4..7].all?("O")
+    elsif row4_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -156,36 +158,36 @@ class WinChecker
       row3_moves << first_element[3].symbol
     end
 
-    if row3_moves[0..3].all?("X")
+    if row3_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[1..4].all?("X")
+    elsif row3_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[2..5].all?("X")
+    elsif row3_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[3..6].all?("X")
+    elsif row3_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[4..7].all?("X")
+    elsif row3_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row3_moves[0..3].all?("O")
+    if row3_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[1..4].all?("O")
+    elsif row3_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[2..5].all?("O")
+    elsif row3_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[3..6].all?("O")
+    elsif row3_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[4..7].all?("O")
+    elsif row3_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -194,36 +196,36 @@ class WinChecker
       row2_moves << first_element[4].symbol
     end
 
-    if row2_moves[0..3].all?("X")
+    if row2_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[1..4].all?("X")
+    elsif row2_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[2..5].all?("X")
+    elsif row2_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[3..6].all?("X")
+    elsif row2_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[4..7].all?("X")
+    elsif row2_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row2_moves[0..3].all?("O")
+    if row2_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[1..4].all?("O")
+    elsif row2_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[2..5].all?("O")
+    elsif row2_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[3..6].all?("O")
+    elsif row2_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[4..7].all?("O")
+    elsif row2_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -232,36 +234,36 @@ class WinChecker
       row1_moves << first_element[5].symbol
     end
 
-    if row1_moves[0..3].all?("X")
+    if row1_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[1..4].all?("X")
+    elsif row1_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[2..5].all?("X")
+    elsif row1_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[3..6].all?("X")
+    elsif row1_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[4..7].all?("X")
+    elsif row1_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row1_moves[0..3].all?("O")
+    if row1_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[1..4].all?("O")
+    elsif row1_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[2..5].all?("O")
+    elsif row1_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[3..6].all?("O")
+    elsif row1_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[4..7].all?("O")
+    elsif row1_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -270,36 +272,36 @@ class WinChecker
       row0_moves << first_element[6].symbol
     end
 
-    if row0_moves[0..3].all?("X")
+    if row0_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[1..4].all?("X")
+    elsif row0_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[2..5].all?("X")
+    elsif row0_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[3..6].all?("X")
+    elsif row0_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[4..7].all?("X")
+    elsif row0_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row0_moves[0..3].all?("O")
+    if row0_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[1..4].all?("O")
+    elsif row0_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[2..5].all?("O")
+    elsif row0_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[3..6].all?("O")
+    elsif row0_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[4..7].all?("O")
+    elsif row0_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -317,36 +319,36 @@ class WinChecker
       row6_moves << cell.symbol
     end
 
-    if row6_moves[0..3].all?('X')
+    if row6_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[1..4].all?('X')
+    elsif row6_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[2..5].all?('X')
+    elsif row6_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[3..6].all?('X')
+    elsif row6_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[4..7].all?('X')
+    elsif row6_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row6_moves[0..3].all?('O')
+    if row6_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[1..4].all?('O')
+    elsif row6_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[2..5].all?('O')
+    elsif row6_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[3..6].all?('O')
+    elsif row6_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[4..7].all?('O')
+    elsif row6_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -355,36 +357,36 @@ class WinChecker
       row5_moves << cell.symbol
     end
 
-    if row5_moves[0..3].all?('X')
+    if row5_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row5_moves[1..4].all?('X')
+    elsif row5_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row5_moves[2..5].all?('X')
+    elsif row5_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row5_moves[3..6].all?('X')
+    elsif row5_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row5_moves[4..7].all?('X')
+    elsif row5_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row5_moves[0..3].all?('O')
+    if row5_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row5_moves[1..4].all?('O')
+    elsif row5_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row5_moves[2..5].all?('O')
+    elsif row5_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row5_moves[3..6].all?('O')
+    elsif row5_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row5_moves[4..7].all?('O')
+    elsif row5_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -393,36 +395,36 @@ class WinChecker
       row4_moves << cell.symbol
     end
 
-    if row4_moves[0..3].all?('X')
+    if row4_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[1..4].all?('X')
+    elsif row4_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[2..5].all?('X')
+    elsif row4_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[3..6].all?('X')
+    elsif row4_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[4..7].all?('X')
+    elsif row4_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row4_moves[0..3].all?('O')
+    if row4_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[1..4].all?('O')
+    elsif row4_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[2..5].all?('O')
+    elsif row4_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[3..6].all?('O')
+    elsif row4_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row4_moves[4..7].all?('O')
+    elsif row4_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -431,36 +433,36 @@ class WinChecker
       row3_moves << cell.symbol
     end
 
-    if row3_moves[0..3].all?('X')
+    if row3_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[1..4].all?('X')
+    elsif row3_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[2..5].all?('X')
+    elsif row3_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[3..6].all?('X')
+    elsif row3_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row3_moves[4..7].all?('X')
+    elsif row3_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row3_moves[0..3].all?('O')
+    if row3_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[1..4].all?('O')
+    elsif row3_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[2..5].all?('O')
+    elsif row3_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[3..6].all?('O')
+    elsif row3_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[4..7].all?('O')
+    elsif row3_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -469,36 +471,36 @@ class WinChecker
       row2_moves << cell.symbol
     end
 
-    if row2_moves[0..3].all?('X')
+    if row2_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[1..4].all?('X')
+    elsif row2_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[2..5].all?('X')
+    elsif row2_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[3..6].all?('X')
+    elsif row2_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[4..7].all?('X')
+    elsif row2_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row2_moves[0..3].all?('O')
+    if row2_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[1..4].all?('O')
+    elsif row2_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[2..5].all?('O')
+    elsif row2_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[3..6].all?('O')
+    elsif row2_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row2_moves[4..7].all?('O')
+    elsif row2_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -507,36 +509,36 @@ class WinChecker
       row1_moves << cell.symbol
     end
 
-    if row1_moves[0..3].all?('X')
+    if row1_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[1..4].all?('X')
+    elsif row1_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[2..5].all?('X')
+    elsif row1_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[3..6].all?('X')
+    elsif row1_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row1_moves[4..7].all?('X')
+    elsif row1_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row1_moves[0..3].all?('O')
+    if row1_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[1..4].all?('O')
+    elsif row1_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[2..5].all?('O')
+    elsif row1_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[3..6].all?('O')
+    elsif row1_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[4..7].all?('O')
+    elsif row1_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -711,153 +713,152 @@ class WinChecker
       @board.board[:row4][0].symbol
     ]
 
-    if diagonal_win_1.all?('X')
+    if diagonal_win_1== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_2.all?('X')
+    elsif diagonal_win_2== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_3.all?('X')
+    elsif diagonal_win_3== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_4.all?('X')
+    elsif diagonal_win_4== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_5.all?('X')
+    elsif diagonal_win_5== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_6.all?('X')
+    elsif diagonal_win_6== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_7.all?('X')
+    elsif diagonal_win_7== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_8.all?('X')
+    elsif diagonal_win_8== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_9.all?('X')
+    elsif diagonal_win_9== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_10.all?('X')
+    elsif diagonal_win_10== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_11.all?('X')
+    elsif diagonal_win_11== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_12.all?('X')
+    elsif diagonal_win_12== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_13.all?('X')
+    elsif diagonal_win_13== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_14.all?('X')
+    elsif diagonal_win_14== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_15.all?('X')
+    elsif diagonal_win_15== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_16.all?('X')
+    elsif diagonal_win_16== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_17.all?('X')
+    elsif diagonal_win_17== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_18.all?('X')
+    elsif diagonal_win_18== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_19.all?('X')
+    elsif diagonal_win_19== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_20.all?('X')
+    elsif diagonal_win_20== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_21.all?('X')
+    elsif diagonal_win_21== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_22.all?('X')
+    elsif diagonal_win_22== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_23.all?('X')
+    elsif diagonal_win_23== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif diagonal_win_24.all?('X')
+    elsif diagonal_win_24== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if diagonal_win_1.all?('O')
+    if diagonal_win_1== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_2.all?('O')
+    elsif diagonal_win_2== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_3.all?('O')
+    elsif diagonal_win_3== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_4.all?('O')
+    elsif diagonal_win_4== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_5.all?('O')
+    elsif diagonal_win_5== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_6.all?('O')
+    elsif diagonal_win_6== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_7.all?('O')
+    elsif diagonal_win_7== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_8.all?('O')
+    elsif diagonal_win_8== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_9.all?('O')
+    elsif diagonal_win_9== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_10.all?('O')
+    elsif diagonal_win_10== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_11.all?('O')
+    elsif diagonal_win_11== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_12.all?('O')
+    elsif diagonal_win_12== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_13.all?('O')
+    elsif diagonal_win_13== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_14.all?('O')
+    elsif diagonal_win_14== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_15.all?('O')
+    elsif diagonal_win_15== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_16.all?('O')
+    elsif diagonal_win_16== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_17.all?('O')
+    elsif diagonal_win_17== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_18.all?('O')
+    elsif diagonal_win_18== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_19.all?('O')
+    elsif diagonal_win_19== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_20.all?('O')
+    elsif diagonal_win_20== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_21.all?('O')
+    elsif diagonal_win_21== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_22.all?('O')
+    elsif diagonal_win_22== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_23.all?('O')
+    elsif diagonal_win_23== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
-    elsif diagonal_win_24.all?('O')
+    elsif diagonal_win_24== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @player.has_won = true
     end
   end
 end
-binding.pry
