@@ -66,5 +66,5 @@ attr_accessor :board, :has_won
       end
     end
   end
-  
+
 end

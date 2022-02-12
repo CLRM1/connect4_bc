@@ -50,3 +50,5 @@ while game_count >= 0
   end
 
 end
+
+puts "See you later!"
