@@ -12,6 +12,7 @@ class Player
   def has_won?
     check_horizontal_wins
     check_vertical_wins
+    check_diagonal_wins
     return @has_won
   end
 

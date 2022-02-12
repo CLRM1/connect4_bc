@@ -15,6 +15,7 @@ attr_accessor :board, :has_won
   def has_won?
     check_horizontal_wins
     check_vertical_wins
+    check_diagonal_wins
     return @has_won
   end
 
