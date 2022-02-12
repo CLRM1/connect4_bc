@@ -8,13 +8,23 @@ describe Board do
       board = Board.new
       expect(board).to be_an_instance_of(Board)
     end
+    it "prints a welcome message" do
+      board = Board.new
+      def print_welcome
+        puts "Welcome to connect 4!"
+        puts "Select a column (ABCDEFG)"
+        puts " "
+      end
+      # require 'pry'; binding.pry
+      expect(board.print_welcome).to eq(print_welcome)
+    end
     it "contains an empty board board" do
       board = Board.new
       expect(board.board[:row0]).to eq(['A', 'B', 'C', 'D', 'E', 'F', 'G'])
     end
   end
 
-  describe '# Start' do
+  describe '# Print board' do
     it 'prints an empty board board' do
       board = Board.new
       row1_syms = []
@@ -48,6 +58,7 @@ describe Board do
       expect(row5_syms).to eq(['.', '.', '.', '.', '.', '.', '.'])
       expect(row6_syms).to eq(['.', '.', '.', '.', '.', '.', '.'])
     end
+
   end
 
 end

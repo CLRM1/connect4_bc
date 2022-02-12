@@ -2,11 +2,9 @@ require 'pry'
 require './lib/space'
 require './lib/player'
 class Board
-attr_reader :board, :player1, :player2
+attr_reader :board
 
   def initialize
-    @player1 = player1
-    @player2 = player2
     @board = {
       :row0 => ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
       :row1 => [Space.new('a1'), Space.new('b1'), Space.new('c1'), Space.new('d1'), Space.new('e1'), Space.new('f1'), Space.new('g1')],
@@ -36,7 +34,7 @@ attr_reader :board, :player1, :player2
     answer = gets.chomp
     answer
   end
-  
+
   def print_welcome
     puts "Welcome to connect 4!"
     puts "Select a column (ABCDEFG)"
