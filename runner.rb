@@ -2,6 +2,7 @@ require './lib/board'
 require './lib/player'
 require './lib/space'
 require './lib/computer'
+require './lib/win_checker'
 require 'pry'
 
 game_count = 0
@@ -13,6 +14,8 @@ while game_count >= 0
 
   computer = Computer.new(board)
 
+  win_checker = WinChecker.new(board, player1, computer)
+
   turn_counter = 0
   puts "Welcome to Connect 4!"
   puts " "
@@ -21,7 +24,7 @@ while game_count >= 0
     puts " "
     puts "Choose a column (ABCDEFG)"
     board.print_board
-    until player1.has_won? || computer.has_won? do
+    until player1.has_won? || computer.has_won? || win_checker.is_a_draw? do
 
       player1.add_piece(gets.chomp)
       computer.add_piece
@@ -31,6 +34,9 @@ while game_count >= 0
       puts "Round:#{turn_counter}"
       puts " "
       board.print_board
+      win_checker.check_diagonal_wins
+      win_checker.check_vertical_wins
+      win_checker.check_horizontal_wins
     end
 
     5.times do
