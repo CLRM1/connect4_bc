@@ -66,6 +66,7 @@ class Player
         add_piece(gets.chomp)
       end
     end
+
   end
 
 end

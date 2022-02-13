@@ -60,9 +60,7 @@ class WinChecker
     elsif columnA_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if columnA_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif columnA_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif columnA_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -98,9 +96,7 @@ class WinChecker
   elsif columnB_moves[4..7]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  end
-
-  if columnB_moves[0..3]== ['O', 'O', 'O', 'O']
+  elsif columnB_moves[0..3]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
   elsif columnB_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -136,9 +132,7 @@ class WinChecker
     elsif columnC_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if columnC_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif columnC_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif columnC_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -174,9 +168,7 @@ class WinChecker
     elsif columnD_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if columnD_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif columnD_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif columnD_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -212,9 +204,7 @@ class WinChecker
     elsif columnE_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if columnE_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif columnE_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif columnE_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -250,9 +240,7 @@ class WinChecker
     elsif columnF_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if columnF_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif columnF_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif columnF_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -270,39 +258,37 @@ class WinChecker
     end
 
     @board.rows.drop(1).each do |row, first_element|
-      columnF_moves << first_element[6].symbol
+      columnG_moves << first_element[6].symbol
     end
 
-    if columnF_moves[0..3]== ['X', 'X', 'X', 'X']
+    if columnG_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif columnF_moves[1..4]== ['X', 'X', 'X', 'X']
+    elsif columnG_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif columnF_moves[2..5]== ['X', 'X', 'X', 'X']
+    elsif columnG_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif columnF_moves[3..6]== ['X', 'X', 'X', 'X']
+    elsif columnG_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif columnF_moves[4..7]== ['X', 'X', 'X', 'X']
+    elsif columnG_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if columnF_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif columnG_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif columnF_moves[1..4]== ['O', 'O', 'O', 'O']
+    elsif columnG_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif columnF_moves[2..5]== ['O', 'O', 'O', 'O']
+    elsif columnG_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif columnF_moves[3..6]== ['O', 'O', 'O', 'O']
+    elsif columnG_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif columnF_moves[4..7]== ['O', 'O', 'O', 'O']
+    elsif columnG_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
@@ -335,9 +321,7 @@ class WinChecker
     elsif row6_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if row6_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif row6_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif row6_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -373,9 +357,7 @@ class WinChecker
     elsif row5_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if row5_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif row5_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif row5_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -411,9 +393,7 @@ class WinChecker
     elsif row4_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if row4_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif row4_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif row4_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -449,9 +429,7 @@ class WinChecker
     elsif row3_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if row3_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif row3_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif row3_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -487,9 +465,7 @@ class WinChecker
     elsif row2_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if row2_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif row2_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif row2_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -525,9 +501,7 @@ class WinChecker
     elsif row1_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if row1_moves[0..3]== ['O', 'O', 'O', 'O']
+    elsif row1_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif row1_moves[1..4]== ['O', 'O', 'O', 'O']
@@ -788,9 +762,7 @@ class WinChecker
     elsif diagonal_win_24== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    end
-
-    if diagonal_win_1== ['O', 'O', 'O', 'O']
+    elsif diagonal_win_1== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     elsif diagonal_win_2== ['O', 'O', 'O', 'O']
