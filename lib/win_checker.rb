@@ -3,6 +3,7 @@ require './lib/player'
 require './lib/space'
 require './lib/computer'
 require 'pry'
+# WinChecker is given a board, player, and computer in order to be able to read the Spaces, and change the value of has_won?
 class WinChecker
   attr_reader :board
   attr_accessor :player, :computer
@@ -11,10 +12,9 @@ class WinChecker
     @computer = computer
     @board = board
   end
-
+  # is_a_draw? will only return true if there are NO '.' on the board
   def is_a_draw?
     symbols = []
-
     @board.board.drop(1).each do |rows, spaces|
       symbols << spaces.map do |space|
         space.symbol
@@ -32,276 +32,276 @@ class WinChecker
   end
 
   def check_vertical_wins
-    row6_moves = []
-    row5_moves = []
-    row4_moves = []
-    row3_moves = []
-    row2_moves = []
-    row1_moves = []
-    row0_moves = []
+    columnA_moves = []
+    columnB_moves = []
+    columnC_moves = []
+    columnD_moves = []
+    columnE_moves = []
+    columnF_moves = []
+    columnG_moves = []
 
     @board.board.drop(1).each do |row, first_element|
-      row6_moves << first_element[0].symbol
+      columnA_moves << first_element[0].symbol
     end
 
-    if row6_moves[0..3]== ['X', 'X', 'X', 'X']
+    if columnA_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[1..4]== ['X', 'X', 'X', 'X']
+    elsif columnA_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[2..5]== ['X', 'X', 'X', 'X']
+    elsif columnA_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[3..6]== ['X', 'X', 'X', 'X']
+    elsif columnA_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row6_moves[4..7]== ['X', 'X', 'X', 'X']
+    elsif columnA_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row6_moves[0..3]== ['O', 'O', 'O', 'O']
+    if columnA_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[1..4]== ['O', 'O', 'O', 'O']
+    elsif columnA_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[2..5]== ['O', 'O', 'O', 'O']
+    elsif columnA_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[3..6]== ['O', 'O', 'O', 'O']
+    elsif columnA_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row6_moves[4..7]== ['O', 'O', 'O', 'O']
+    elsif columnA_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
 
   @board.board.drop(1).each do |row, first_element|
-    row5_moves << first_element[1].symbol
+    columnB_moves << first_element[1].symbol
   end
 
-  if row5_moves[0..3]== ['X', 'X', 'X', 'X']
+  if columnB_moves[0..3]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[1..4]== ['X', 'X', 'X', 'X']
+  elsif columnB_moves[1..4]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[2..5]== ['X', 'X', 'X', 'X']
+  elsif columnB_moves[2..5]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[3..6]== ['X', 'X', 'X', 'X']
+  elsif columnB_moves[3..6]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
-  elsif row5_moves[4..7]== ['X', 'X', 'X', 'X']
+  elsif columnB_moves[4..7]== ['X', 'X', 'X', 'X']
     puts "You win!!"
     @player.has_won = true
   end
 
-  if row5_moves[0..3]== ['O', 'O', 'O', 'O']
+  if columnB_moves[0..3]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[1..4]== ['O', 'O', 'O', 'O']
+  elsif columnB_moves[1..4]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[2..5]== ['O', 'O', 'O', 'O']
+  elsif columnB_moves[2..5]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[3..6]== ['O', 'O', 'O', 'O']
+  elsif columnB_moves[3..6]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
-  elsif row5_moves[4..7]== ['O', 'O', 'O', 'O']
+  elsif columnB_moves[4..7]== ['O', 'O', 'O', 'O']
     puts "Computer wins!!"
     @computer.has_won = true
   end
 
     @board.board.drop(1).each do |row, first_element|
-      row4_moves << first_element[2].symbol
+      columnC_moves << first_element[2].symbol
     end
 
-    if row4_moves[0..3]== ['X', 'X', 'X', 'X']
+    if columnC_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[1..4]== ['X', 'X', 'X', 'X']
+    elsif columnC_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[2..5]== ['X', 'X', 'X', 'X']
+    elsif columnC_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[3..6]== ['X', 'X', 'X', 'X']
+    elsif columnC_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row4_moves[4..7]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    end
-
-    if row4_moves[0..3]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row4_moves[1..4]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row4_moves[2..5]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row4_moves[3..6]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row4_moves[4..7]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    end
-
-    @board.board.drop(1).each do |row, first_element|
-      row3_moves << first_element[3].symbol
-    end
-
-    if row3_moves[0..3]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row3_moves[1..4]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row3_moves[2..5]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row3_moves[3..6]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row3_moves[4..7]== ['X', 'X', 'X', 'X']
+    elsif columnC_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row3_moves[0..3]== ['O', 'O', 'O', 'O']
+    if columnC_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[1..4]== ['O', 'O', 'O', 'O']
+    elsif columnC_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[2..5]== ['O', 'O', 'O', 'O']
+    elsif columnC_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[3..6]== ['O', 'O', 'O', 'O']
+    elsif columnC_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row3_moves[4..7]== ['O', 'O', 'O', 'O']
+    elsif columnC_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
 
     @board.board.drop(1).each do |row, first_element|
-      row2_moves << first_element[4].symbol
+      columnD_moves << first_element[3].symbol
     end
 
-    if row2_moves[0..3]== ['X', 'X', 'X', 'X']
+    if columnD_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[1..4]== ['X', 'X', 'X', 'X']
+    elsif columnD_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[2..5]== ['X', 'X', 'X', 'X']
+    elsif columnD_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[3..6]== ['X', 'X', 'X', 'X']
+    elsif columnD_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row2_moves[4..7]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    end
-
-    if row2_moves[0..3]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row2_moves[1..4]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row2_moves[2..5]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row2_moves[3..6]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    elsif row2_moves[4..7]== ['O', 'O', 'O', 'O']
-      puts "Computer wins!!"
-      @computer.has_won = true
-    end
-
-    @board.board.drop(1).each do |row, first_element|
-      row1_moves << first_element[5].symbol
-    end
-
-    if row1_moves[0..3]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row1_moves[1..4]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row1_moves[2..5]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row1_moves[3..6]== ['X', 'X', 'X', 'X']
-      puts "You win!!"
-      @player.has_won = true
-    elsif row1_moves[4..7]== ['X', 'X', 'X', 'X']
+    elsif columnD_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row1_moves[0..3]== ['O', 'O', 'O', 'O']
+    if columnD_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[1..4]== ['O', 'O', 'O', 'O']
+    elsif columnD_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[2..5]== ['O', 'O', 'O', 'O']
+    elsif columnD_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[3..6]== ['O', 'O', 'O', 'O']
+    elsif columnD_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row1_moves[4..7]== ['O', 'O', 'O', 'O']
+    elsif columnD_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
 
     @board.board.drop(1).each do |row, first_element|
-      row0_moves << first_element[6].symbol
+      columnE_moves << first_element[4].symbol
     end
 
-    if row0_moves[0..3]== ['X', 'X', 'X', 'X']
+    if columnE_moves[0..3]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[1..4]== ['X', 'X', 'X', 'X']
+    elsif columnE_moves[1..4]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[2..5]== ['X', 'X', 'X', 'X']
+    elsif columnE_moves[2..5]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[3..6]== ['X', 'X', 'X', 'X']
+    elsif columnE_moves[3..6]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
-    elsif row0_moves[4..7]== ['X', 'X', 'X', 'X']
+    elsif columnE_moves[4..7]== ['X', 'X', 'X', 'X']
       puts "You win!!"
       @player.has_won = true
     end
 
-    if row0_moves[0..3]== ['O', 'O', 'O', 'O']
+    if columnE_moves[0..3]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[1..4]== ['O', 'O', 'O', 'O']
+    elsif columnE_moves[1..4]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[2..5]== ['O', 'O', 'O', 'O']
+    elsif columnE_moves[2..5]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[3..6]== ['O', 'O', 'O', 'O']
+    elsif columnE_moves[3..6]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
-    elsif row0_moves[4..7]== ['O', 'O', 'O', 'O']
+    elsif columnE_moves[4..7]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    end
+
+    @board.board.drop(1).each do |row, first_element|
+      columnF_moves << first_element[5].symbol
+    end
+
+    if columnF_moves[0..3]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[1..4]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[2..5]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[3..6]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[4..7]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    end
+
+    if columnF_moves[0..3]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[1..4]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[2..5]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[3..6]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[4..7]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    end
+
+    @board.board.drop(1).each do |row, first_element|
+      columnF_moves << first_element[6].symbol
+    end
+
+    if columnF_moves[0..3]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[1..4]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[2..5]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[3..6]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    elsif columnF_moves[4..7]== ['X', 'X', 'X', 'X']
+      puts "You win!!"
+      @player.has_won = true
+    end
+
+    if columnF_moves[0..3]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[1..4]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[2..5]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[3..6]== ['O', 'O', 'O', 'O']
+      puts "Computer wins!!"
+      @computer.has_won = true
+    elsif columnF_moves[4..7]== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
       @computer.has_won = true
     end
