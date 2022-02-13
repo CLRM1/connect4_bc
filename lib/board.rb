@@ -2,12 +2,12 @@ require 'pry'
 require './lib/space'
 require './lib/player'
 class Board
-attr_reader :board, :player1, :player2
+attr_reader :rows, :player1, :player2
 # the board is designed so it only needs to be initialized 1 time, then it can be passed as a parameter to a Player, Computer, and Win_checker.
   def initialize
     @player1 = player1
     @player2 = player2
-    @board = {
+    @rows = {
       :row0 => ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
       :row1 => [Space.new, Space.new, Space.new, Space.new, Space.new, Space.new, Space.new],
       :row2 => [Space.new, Space.new, Space.new, Space.new, Space.new, Space.new, Space.new],
@@ -19,8 +19,8 @@ attr_reader :board, :player1, :player2
   end
 # print_board calls the "symbol" method on each Space, and stores the value into updated_board.
   def print_board
-    puts @board[:row0].join(' ')
-    @board.drop(1).each do |row, spaces|
+    puts @rows[:row0].join(' ')
+    @rows.drop(1).each do |row, spaces|
       updated_board = spaces.map do |space|
         space.symbol
       end

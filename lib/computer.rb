@@ -39,29 +39,29 @@ attr_accessor :board, :has_won
     if selection.class != Integer
       add_piece
     elsif selection <= 6
-      if @board.board[:row6][selection].is_empty?
-        board.board[:row6][selection].is_empty = false
-        board.board[:row6][selection].symbol = 'O'
+      if @board.rows[:row6][selection].is_empty?
+        board.rows[:row6][selection].is_empty = false
+        board.rows[:row6][selection].symbol = 'O'
 
-      elsif @board.board[:row5][selection].is_empty?
-        board.board[:row5][selection].is_empty = false
-        board.board[:row5][selection].symbol = 'O'
+      elsif @board.rows[:row5][selection].is_empty?
+        board.rows[:row5][selection].is_empty = false
+        board.rows[:row5][selection].symbol = 'O'
 
-      elsif @board.board[:row4][selection].is_empty?
-        board.board[:row4][selection].is_empty = false
-        board.board[:row4][selection].symbol = 'O'
+      elsif @board.rows[:row4][selection].is_empty?
+        board.rows[:row4][selection].is_empty = false
+        board.rows[:row4][selection].symbol = 'O'
 
-      elsif @board.board[:row3][selection].is_empty?
-        board.board[:row3][selection].is_empty = false
-        board.board[:row3][selection].symbol = 'O'
+      elsif @board.rows[:row3][selection].is_empty?
+        board.rows[:row3][selection].is_empty = false
+        board.rows[:row3][selection].symbol = 'O'
 
-      elsif @board.board[:row2][selection].is_empty?
-        board.board[:row2][selection].is_empty = false
-        board.board[:row2][selection].symbol = 'O'
+      elsif @board.rows[:row2][selection].is_empty?
+        board.rows[:row2][selection].is_empty = false
+        board.rows[:row2][selection].symbol = 'O'
 
-      elsif @board.board[:row1][selection].is_empty?
-        board.board[:row1][selection].is_empty = false
-        board.board[:row1][selection].symbol = 'O'
+      elsif @board.rows[:row1][selection].is_empty?
+        board.rows[:row1][selection].is_empty = false
+        board.rows[:row1][selection].symbol = 'O'
       else
         add_piece
       end

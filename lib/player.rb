@@ -38,29 +38,29 @@ class Player
       board.print_board
       add_piece(gets.chomp)
     elsif column <= 6
-      if @board.board[:row6][column].is_empty?
-        board.board[:row6][column].is_empty = false
-        board.board[:row6][column].symbol = 'X'
+      if @board.rows[:row6][column].is_empty?
+        board.rows[:row6][column].is_empty = false
+        board.rows[:row6][column].symbol = 'X'
 
-      elsif @board.board[:row5][column].is_empty?
-        board.board[:row5][column].is_empty = false
-        board.board[:row5][column].symbol = 'X'
+      elsif @board.rows[:row5][column].is_empty?
+        board.rows[:row5][column].is_empty = false
+        board.rows[:row5][column].symbol = 'X'
 
-      elsif @board.board[:row4][column].is_empty?
-        board.board[:row4][column].is_empty = false
-        board.board[:row4][column].symbol = 'X'
+      elsif @board.rows[:row4][column].is_empty?
+        board.rows[:row4][column].is_empty = false
+        board.rows[:row4][column].symbol = 'X'
 
-      elsif @board.board[:row3][column].is_empty?
-        board.board[:row3][column].is_empty = false
-        board.board[:row3][column].symbol = 'X'
+      elsif @board.rows[:row3][column].is_empty?
+        board.rows[:row3][column].is_empty = false
+        board.rows[:row3][column].symbol = 'X'
 
-      elsif @board.board[:row2][column].is_empty?
-        board.board[:row2][column].is_empty = false
-        board.board[:row2][column].symbol = 'X'
+      elsif @board.rows[:row2][column].is_empty?
+        board.rows[:row2][column].is_empty = false
+        board.rows[:row2][column].symbol = 'X'
 
-      elsif @board.board[:row1][column].is_empty?
-        board.board[:row1][column].is_empty = false
-        board.board[:row1][column].symbol = 'X'
+      elsif @board.rows[:row1][column].is_empty?
+        board.rows[:row1][column].is_empty = false
+        board.rows[:row1][column].symbol = 'X'
       else
         puts "Column is full. Choose another"
         add_piece(gets.chomp)

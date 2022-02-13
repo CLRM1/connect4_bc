@@ -15,7 +15,7 @@ class WinChecker
   # is_a_draw? will only return true if there are NO '.' on the board
   def is_a_draw?
     symbols = []
-    @board.board.drop(1).each do |rows, spaces|
+    @board.rows.drop(1).each do |rows, spaces|
       symbols << spaces.map do |space|
         space.symbol
       end
@@ -41,7 +41,7 @@ class WinChecker
     columnF_moves = []
     columnG_moves = []
 
-    @board.board.drop(1).each do |row, first_element|
+    @board.rows.drop(1).each do |row, first_element|
       columnA_moves << first_element[0].symbol
     end
 
@@ -79,7 +79,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-  @board.board.drop(1).each do |row, first_element|
+  @board.rows.drop(1).each do |row, first_element|
     columnB_moves << first_element[1].symbol
   end
 
@@ -117,7 +117,7 @@ class WinChecker
     @computer.has_won = true
   end
 
-    @board.board.drop(1).each do |row, first_element|
+    @board.rows.drop(1).each do |row, first_element|
       columnC_moves << first_element[2].symbol
     end
 
@@ -155,7 +155,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board.drop(1).each do |row, first_element|
+    @board.rows.drop(1).each do |row, first_element|
       columnD_moves << first_element[3].symbol
     end
 
@@ -193,7 +193,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board.drop(1).each do |row, first_element|
+    @board.rows.drop(1).each do |row, first_element|
       columnE_moves << first_element[4].symbol
     end
 
@@ -231,7 +231,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board.drop(1).each do |row, first_element|
+    @board.rows.drop(1).each do |row, first_element|
       columnF_moves << first_element[5].symbol
     end
 
@@ -269,7 +269,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board.drop(1).each do |row, first_element|
+    @board.rows.drop(1).each do |row, first_element|
       columnF_moves << first_element[6].symbol
     end
 
@@ -316,7 +316,7 @@ class WinChecker
     row2_moves = []
     row1_moves = []
 
-    @board.board[:row6].each do |cell|
+    @board.rows[:row6].each do |cell|
       row6_moves << cell.symbol
     end
 
@@ -354,7 +354,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board[:row5].each do |cell|
+    @board.rows[:row5].each do |cell|
       row5_moves << cell.symbol
     end
 
@@ -392,7 +392,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board[:row4].each do |cell|
+    @board.rows[:row4].each do |cell|
       row4_moves << cell.symbol
     end
 
@@ -430,7 +430,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board[:row3].each do |cell|
+    @board.rows[:row3].each do |cell|
       row3_moves << cell.symbol
     end
 
@@ -468,7 +468,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board[:row2].each do |cell|
+    @board.rows[:row2].each do |cell|
       row2_moves << cell.symbol
     end
 
@@ -506,7 +506,7 @@ class WinChecker
       @computer.has_won = true
     end
 
-    @board.board[:row1].each do |cell|
+    @board.rows[:row1].each do |cell|
       row1_moves << cell.symbol
     end
 
@@ -549,171 +549,171 @@ class WinChecker
   # It then uses the same logic as the last 2 methods to check for 4 in a row.
   def check_diagonal_wins
     diagonal_win_1 = [
-      @board.board[:row1][0].symbol,
-      @board.board[:row2][1].symbol,
-      @board.board[:row3][2].symbol,
-      @board.board[:row4][3].symbol,
+      @board.rows[:row1][0].symbol,
+      @board.rows[:row2][1].symbol,
+      @board.rows[:row3][2].symbol,
+      @board.rows[:row4][3].symbol,
     ]
 
     diagonal_win_2 = [
-      @board.board[:row2][1].symbol,
-      @board.board[:row3][2].symbol,
-      @board.board[:row4][3].symbol,
-      @board.board[:row5][4].symbol
+      @board.rows[:row2][1].symbol,
+      @board.rows[:row3][2].symbol,
+      @board.rows[:row4][3].symbol,
+      @board.rows[:row5][4].symbol
     ]
 
     diagonal_win_3 = [
-      @board.board[:row3][2].symbol,
-      @board.board[:row4][3].symbol,
-      @board.board[:row5][4].symbol,
-      @board.board[:row6][5].symbol,
+      @board.rows[:row3][2].symbol,
+      @board.rows[:row4][3].symbol,
+      @board.rows[:row5][4].symbol,
+      @board.rows[:row6][5].symbol,
     ]
 
     diagonal_win_4 = [
-      @board.board[:row1][1].symbol,
-      @board.board[:row2][2].symbol,
-      @board.board[:row3][3].symbol,
-      @board.board[:row4][4].symbol
+      @board.rows[:row1][1].symbol,
+      @board.rows[:row2][2].symbol,
+      @board.rows[:row3][3].symbol,
+      @board.rows[:row4][4].symbol
     ]
 
     diagonal_win_5 = [
-      @board.board[:row2][2].symbol,
-      @board.board[:row3][3].symbol,
-      @board.board[:row4][4].symbol,
-      @board.board[:row5][5].symbol
+      @board.rows[:row2][2].symbol,
+      @board.rows[:row3][3].symbol,
+      @board.rows[:row4][4].symbol,
+      @board.rows[:row5][5].symbol
     ]
 
     diagonal_win_6 = [
-      @board.board[:row3][3].symbol,
-      @board.board[:row4][4].symbol,
-      @board.board[:row5][5].symbol,
-      @board.board[:row6][6].symbol
+      @board.rows[:row3][3].symbol,
+      @board.rows[:row4][4].symbol,
+      @board.rows[:row5][5].symbol,
+      @board.rows[:row6][6].symbol
     ]
 
     diagonal_win_7 = [
-      @board.board[:row1][2].symbol,
-      @board.board[:row2][3].symbol,
-      @board.board[:row3][4].symbol,
-      @board.board[:row4][5].symbol
+      @board.rows[:row1][2].symbol,
+      @board.rows[:row2][3].symbol,
+      @board.rows[:row3][4].symbol,
+      @board.rows[:row4][5].symbol
     ]
 
     diagonal_win_8 = [
-      @board.board[:row2][3].symbol,
-      @board.board[:row3][4].symbol,
-      @board.board[:row4][5].symbol,
-      @board.board[:row5][6].symbol
+      @board.rows[:row2][3].symbol,
+      @board.rows[:row3][4].symbol,
+      @board.rows[:row4][5].symbol,
+      @board.rows[:row5][6].symbol
     ]
 
     diagonal_win_9 = [
-      @board.board[:row1][3].symbol,
-      @board.board[:row2][4].symbol,
-      @board.board[:row3][5].symbol,
-      @board.board[:row4][6].symbol
+      @board.rows[:row1][3].symbol,
+      @board.rows[:row2][4].symbol,
+      @board.rows[:row3][5].symbol,
+      @board.rows[:row4][6].symbol
     ]
 
     diagonal_win_10 = [
-      @board.board[:row2][0].symbol,
-      @board.board[:row3][1].symbol,
-      @board.board[:row4][2].symbol,
-      @board.board[:row5][3].symbol
+      @board.rows[:row2][0].symbol,
+      @board.rows[:row3][1].symbol,
+      @board.rows[:row4][2].symbol,
+      @board.rows[:row5][3].symbol
     ]
 
     diagonal_win_11 = [
-      @board.board[:row3][1].symbol,
-      @board.board[:row4][2].symbol,
-      @board.board[:row5][3].symbol,
-      @board.board[:row6][4].symbol
+      @board.rows[:row3][1].symbol,
+      @board.rows[:row4][2].symbol,
+      @board.rows[:row5][3].symbol,
+      @board.rows[:row6][4].symbol
     ]
 
     diagonal_win_12 = [
-      @board.board[:row3][0].symbol,
-      @board.board[:row4][1].symbol,
-      @board.board[:row5][2].symbol,
-      @board.board[:row6][3].symbol
+      @board.rows[:row3][0].symbol,
+      @board.rows[:row4][1].symbol,
+      @board.rows[:row5][2].symbol,
+      @board.rows[:row6][3].symbol
     ]
 
     diagonal_win_13 = [
-      @board.board[:row3][6].symbol,
-      @board.board[:row4][5].symbol,
-      @board.board[:row5][4].symbol,
-      @board.board[:row6][3].symbol
+      @board.rows[:row3][6].symbol,
+      @board.rows[:row4][5].symbol,
+      @board.rows[:row5][4].symbol,
+      @board.rows[:row6][3].symbol
     ]
 
     diagonal_win_14 = [
-      @board.board[:row2][6].symbol,
-      @board.board[:row3][5].symbol,
-      @board.board[:row4][4].symbol,
-      @board.board[:row5][3].symbol
+      @board.rows[:row2][6].symbol,
+      @board.rows[:row3][5].symbol,
+      @board.rows[:row4][4].symbol,
+      @board.rows[:row5][3].symbol
     ]
 
     diagonal_win_15 = [
-      @board.board[:row3][5].symbol,
-      @board.board[:row4][4].symbol,
-      @board.board[:row5][3].symbol,
-      @board.board[:row6][2].symbol
+      @board.rows[:row3][5].symbol,
+      @board.rows[:row4][4].symbol,
+      @board.rows[:row5][3].symbol,
+      @board.rows[:row6][2].symbol
     ]
 
     diagonal_win_16 = [
-      @board.board[:row1][6].symbol,
-      @board.board[:row2][5].symbol,
-      @board.board[:row3][4].symbol,
-      @board.board[:row4][3].symbol
+      @board.rows[:row1][6].symbol,
+      @board.rows[:row2][5].symbol,
+      @board.rows[:row3][4].symbol,
+      @board.rows[:row4][3].symbol
     ]
 
     diagonal_win_17 = [
-      @board.board[:row2][5].symbol,
-      @board.board[:row3][4].symbol,
-      @board.board[:row4][3].symbol,
-      @board.board[:row5][2].symbol
+      @board.rows[:row2][5].symbol,
+      @board.rows[:row3][4].symbol,
+      @board.rows[:row4][3].symbol,
+      @board.rows[:row5][2].symbol
     ]
 
     diagonal_win_18 = [
-      @board.board[:row3][4].symbol,
-      @board.board[:row4][3].symbol,
-      @board.board[:row5][2].symbol,
-      @board.board[:row6][1].symbol
+      @board.rows[:row3][4].symbol,
+      @board.rows[:row4][3].symbol,
+      @board.rows[:row5][2].symbol,
+      @board.rows[:row6][1].symbol
     ]
 
     diagonal_win_19 = [
-      @board.board[:row1][5].symbol,
-      @board.board[:row2][4].symbol,
-      @board.board[:row3][3].symbol,
-      @board.board[:row4][2].symbol
+      @board.rows[:row1][5].symbol,
+      @board.rows[:row2][4].symbol,
+      @board.rows[:row3][3].symbol,
+      @board.rows[:row4][2].symbol
     ]
 
     diagonal_win_20 = [
-      @board.board[:row2][4].symbol,
-      @board.board[:row3][3].symbol,
-      @board.board[:row4][2].symbol,
-      @board.board[:row5][1].symbol
+      @board.rows[:row2][4].symbol,
+      @board.rows[:row3][3].symbol,
+      @board.rows[:row4][2].symbol,
+      @board.rows[:row5][1].symbol
     ]
 
     diagonal_win_21 = [
-      @board.board[:row3][3].symbol,
-      @board.board[:row4][2].symbol,
-      @board.board[:row5][1].symbol,
-      @board.board[:row6][0].symbol
+      @board.rows[:row3][3].symbol,
+      @board.rows[:row4][2].symbol,
+      @board.rows[:row5][1].symbol,
+      @board.rows[:row6][0].symbol
     ]
 
     diagonal_win_22 = [
-      @board.board[:row1][4].symbol,
-      @board.board[:row2][3].symbol,
-      @board.board[:row3][2].symbol,
-      @board.board[:row4][1].symbol
+      @board.rows[:row1][4].symbol,
+      @board.rows[:row2][3].symbol,
+      @board.rows[:row3][2].symbol,
+      @board.rows[:row4][1].symbol
     ]
 
     diagonal_win_23 = [
-      @board.board[:row2][3].symbol,
-      @board.board[:row3][2].symbol,
-      @board.board[:row4][1].symbol,
-      @board.board[:row5][0].symbol
+      @board.rows[:row2][3].symbol,
+      @board.rows[:row3][2].symbol,
+      @board.rows[:row4][1].symbol,
+      @board.rows[:row5][0].symbol
     ]
 
     diagonal_win_24 = [
-      @board.board[:row1][3].symbol,
-      @board.board[:row2][2].symbol,
-      @board.board[:row3][1].symbol,
-      @board.board[:row4][0].symbol
+      @board.rows[:row1][3].symbol,
+      @board.rows[:row2][2].symbol,
+      @board.rows[:row3][1].symbol,
+      @board.rows[:row4][0].symbol
     ]
 
     if diagonal_win_1== ['X', 'X', 'X', 'X']
@@ -792,76 +792,76 @@ class WinChecker
 
     if diagonal_win_1== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_2== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_3== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_4== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_5== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_6== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_7== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_8== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_9== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_10== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_11== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_12== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_13== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_14== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_15== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_16== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_17== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_18== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_19== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_20== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_21== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_22== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_23== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     elsif diagonal_win_24== ['O', 'O', 'O', 'O']
       puts "Computer wins!!"
-      @player.has_won = true
+      @computer.has_won = true
     end
   end
 end
