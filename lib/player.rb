@@ -1,6 +1,6 @@
 require 'pry'
 require './lib/board'
-
+# a Player object needs to be passed the same Board as the Computer and WinChecker.
 class Player
     attr_accessor :board, :has_won
 
@@ -12,7 +12,7 @@ class Player
   def has_won?
     return @has_won
   end
-
+  # player.add_piece takes an argument of column. this way it can be tested in rspec using player.add_piece('G') or any other column letter.
   def add_piece(column)
     if column.upcase == 'A'
       column = 0
@@ -29,7 +29,7 @@ class Player
     elsif column.upcase == 'G'
       column = 6
     end
-
+    #we puts ' ' 10.times before displaying an error message to space out the previous board and make the console easier to read.
     if column.class != Integer
       10.times do
         puts " "

@@ -1,7 +1,6 @@
 require 'pry'
 require './lib/board'
 require './lib/player'
-
 class Space
   attr_accessor :is_empty, :symbol
   def initialize
