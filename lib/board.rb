@@ -2,19 +2,11 @@ require 'pry'
 require './lib/space'
 require './lib/player'
 class Board
-<<<<<<< HEAD
-attr_reader :board
 
-  def initialize
-    @board = {
-=======
-attr_reader :rows, :player1, :player2
+attr_reader :rows
 # the board is designed so it only needs to be initialized 1 time, then it can be passed as a parameter to a Player, Computer, and Win_checker.
   def initialize
-    @player1 = player1
-    @player2 = player2
     @rows = {
->>>>>>> Brylan
       :row0 => ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
       :row1 => [Space.new, Space.new, Space.new, Space.new, Space.new, Space.new, Space.new],
       :row2 => [Space.new, Space.new, Space.new, Space.new, Space.new, Space.new, Space.new],
@@ -43,12 +35,4 @@ attr_reader :rows, :player1, :player2
     answer
   end
 
-<<<<<<< HEAD
-  def print_welcome
-    puts "Welcome to connect 4!"
-    puts "Select a column (ABCDEFG)"
-    puts " "
-  end
-=======
->>>>>>> Brylan
 end
