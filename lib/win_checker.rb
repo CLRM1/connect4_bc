@@ -30,7 +30,8 @@ class WinChecker
     end
 
   end
-
+  # check_vertical_wins runs through each row of each column and stores their symbols into a designated array.
+  # it then checks if their are 4 Xs or 4 Os in a row
   def check_vertical_wins
     columnA_moves = []
     columnB_moves = []
@@ -306,7 +307,7 @@ class WinChecker
       @computer.has_won = true
     end
   end
-
+  # check_horizontal_wins works about the same way as check_vertical_wins.
   def check_horizontal_wins
     row6_moves = []
     row5_moves = []
@@ -543,7 +544,9 @@ class WinChecker
       @computer.has_won = true
     end
   end
-
+  # check_diagonal wins has a hard coded array of every possible diagonal win. Not ideal but i have yet to figure out how to use an
+  # enumerator to do this.
+  # It then uses the same logic as the last 2 methods to check for 4 in a row.
   def check_diagonal_wins
     diagonal_win_1 = [
       @board.board[:row1][0].symbol,
