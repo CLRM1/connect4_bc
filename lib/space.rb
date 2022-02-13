@@ -3,10 +3,9 @@ require './lib/board'
 require './lib/player'
 
 class Space
-  attr_accessor :is_empty, :coords, :symbol
-  def initialize(coords)
+  attr_accessor :is_empty, :symbol
+  def initialize
     @is_empty = true
-    @coords = coords
     @symbol = '.'
   end
 
