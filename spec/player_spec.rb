@@ -28,6 +28,12 @@ describe Player do
       spot_6 = user_player.board.rows[:row6][5]
       spot_7 = user_player.board.rows[:row6][6]
       expect(spot_1.symbol).to eq('X')
+      expect(spot_2.symbol).to eq('.')
+      expect(spot_3.symbol).to eq('.')
+      expect(spot_4.symbol).to eq('.')
+      expect(spot_5.symbol).to eq('.')
+      expect(spot_6.symbol).to eq('.')
+      expect(spot_7.symbol).to eq('.')
     end
 
 

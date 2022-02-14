@@ -24,7 +24,7 @@ class WinChecker
 
     if symbols.none?('.')
       true
-      puts "It's a draw!!"
+      return "It's a draw!!"
     else
       false
     end
