@@ -164,6 +164,7 @@ describe WinChecker do
     game_status.check_diagonal_wins
     game_status.check_vertical_wins
     game_status.check_horizontal_wins
+    require 'pry'; binding.pry
     expect(game_status.is_a_draw?).to eq("It's a draw!!")
     end
 

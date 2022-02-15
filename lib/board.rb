@@ -1,4 +1,3 @@
-require 'pry'
 require './lib/space'
 require './lib/player'
 class Board
