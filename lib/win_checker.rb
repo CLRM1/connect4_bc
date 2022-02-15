@@ -2,7 +2,6 @@ require './lib/board'
 require './lib/player'
 require './lib/space'
 require './lib/computer'
-require 'pry'
 # WinChecker is given a board, player, and computer in order to be able to read the Spaces, and change the value of has_won?
 class WinChecker
   attr_reader :board

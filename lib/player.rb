@@ -1,4 +1,3 @@
-require 'pry'
 require './lib/board'
 # a Player object needs to be passed the same Board as the Computer and WinChecker.
 class Player
