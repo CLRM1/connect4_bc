@@ -5,18 +5,14 @@ require './lib/computer'
 require './lib/win_checker'
 require 'pry'
 
-game_count = 0
-answer = "p or q"
-while game_count >= 0
+loop do
+  answer = "p or q"
   board = Board.new
-
   player1 = Player.new(board)
-
   computer = Computer.new(board)
-
   win_checker = WinChecker.new(board, player1, computer)
-
   turn_counter = 0
+  
   puts "Welcome to Connect 4!"
   puts " "
   answer = board.menu
@@ -42,7 +38,6 @@ while game_count >= 0
     5.times do
       puts " "
     end
-    game_count += 1
   elsif answer.upcase == 'Q'
     puts "See you later!"
     break
