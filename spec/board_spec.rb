@@ -75,7 +75,15 @@ describe Board do
 
     it 'cannot place a piece in an invalid column' do
       board = Board.new
-      expect(board.add_piece("X", "Z")).to eq("Invalid selection. Please choose from (ABCDEFG)")
+      board.add_piece("X", "Z")
+      symbols = []
+      board.rows.each do |row|
+        symbols << row.map do |space|
+          space.symbol
+        end
+      end
+      symbols.flatten!
+      expect(symbols.all?('.')).to be(true)
     end
   end
 

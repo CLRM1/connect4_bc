@@ -39,7 +39,12 @@ attr_reader :rows
   end
 
   def is_valid_column?(choice)
-    columns.include?(choice.upcase)
+    if columns.include?(choice.upcase)
+      true
+    else
+      p "Invalid selection. Please choose from (ABCDEFG)"
+      false
+    end
   end
 
   def add_piece(symbol, column)
@@ -51,10 +56,8 @@ attr_reader :rows
           break
         end
       end
-    else
-      "Invalid selection. Please choose from (ABCDEFG)"
     end
   end
 
 end
-# binding.pry
+binding.pry
