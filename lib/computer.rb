@@ -17,54 +17,8 @@ attr_accessor :board, :has_won
   end
   # Computer.add_piece does not need to be given a parameter because it chooses it's column randomly.
   def add_piece
-    selections = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-    selection = selections.sample
-    if selection.upcase == 'A'
-      selection = 0
-    elsif selection.upcase == 'B'
-      selection = 1
-    elsif selection.upcase == 'C'
-      selection = 2
-    elsif selection.upcase == 'D'
-      selection = 3
-    elsif selection.upcase == 'E'
-      selection = 4
-    elsif selection.upcase == 'F'
-      selection = 5
-    elsif selection.upcase == 'G'
-      selection = 6
-    end
-
-    if selection.class != Integer
-      add_piece
-    elsif selection <= 6
-      if @board.rows[:row6][selection].is_empty?
-        board.rows[:row6][selection].is_empty = false
-        board.rows[:row6][selection].symbol = 'O'
-
-      elsif @board.rows[:row5][selection].is_empty?
-        board.rows[:row5][selection].is_empty = false
-        board.rows[:row5][selection].symbol = 'O'
-
-      elsif @board.rows[:row4][selection].is_empty?
-        board.rows[:row4][selection].is_empty = false
-        board.rows[:row4][selection].symbol = 'O'
-
-      elsif @board.rows[:row3][selection].is_empty?
-        board.rows[:row3][selection].is_empty = false
-        board.rows[:row3][selection].symbol = 'O'
-
-      elsif @board.rows[:row2][selection].is_empty?
-        board.rows[:row2][selection].is_empty = false
-        board.rows[:row2][selection].symbol = 'O'
-
-      elsif @board.rows[:row1][selection].is_empty?
-        board.rows[:row1][selection].is_empty = false
-        board.rows[:row1][selection].symbol = 'O'
-      else
-        add_piece
-      end
-    end
+    column = @board.columns.sample
+    @board.add_piece('O', column)
   end
 
 end
