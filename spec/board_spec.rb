@@ -9,21 +9,23 @@ describe Board do
       expect(board).to be_an_instance_of(Board)
     end
 
-    it "contains an empty board" do
+    it "contains an empty board board" do
       board = Board.new
+      expect(board.rows[:row0]).to eq(['A', 'B', 'C', 'D', 'E', 'F', 'G'])
       symbols = []
-      board.rows.each do |row|
-        symbols << row.map do |space|
-          space.symbol
+      board.rows.drop(1).each do |row, cells|
+        cells.each do |cell|
+          symbols << cell.symbol
         end
       end
-      symbols.flatten!
+      symbols.flatten
       expect(symbols.all?('.')).to be(true)
+
     end
   end
 
   describe '# Print board' do
-    xit 'prints an empty board' do
+    it 'prints an empty board board' do
       board = Board.new
       row1_syms = []
       row2_syms = []
@@ -55,26 +57,6 @@ describe Board do
       expect(row4_syms).to eq(['.', '.', '.', '.', '.', '.', '.'])
       expect(row5_syms).to eq(['.', '.', '.', '.', '.', '.', '.'])
       expect(row6_syms).to eq(['.', '.', '.', '.', '.', '.', '.'])
-    end
-
-  end
-
-  describe 'add_piece' do
-    it 'places a piece in the given column' do
-      board = Board.new
-      board.add_piece("X", "A")
-
-      expect(board.rows[5][0].symbol).to eq("X")
-      expect(board.rows[4][0].symbol).to eq(".")
-    end
-
-    it "can place the piece again" do
-      board = Board.new
-      board.add_piece("X", "A")
-      board.add_piece("X", "A")
-
-      expect(board.rows[5][0].symbol).to eq("X")
-      expect(board.rows[4][0].symbol).to eq("X")
     end
 
   end

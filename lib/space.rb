@@ -1,15 +1,13 @@
-
+require './lib/board'
+require './lib/player'
 class Space
   attr_accessor :is_empty, :symbol
   def initialize
+    @is_empty = true
     @symbol = '.'
   end
 
   def is_empty?
-    @symbol == '.'
-  end
-
-  def add_piece(symbol)
-    @symbol = symbol
+    return @is_empty
   end
 end
