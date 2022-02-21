@@ -75,7 +75,6 @@ describe WinChecker do
     board.rows[:row6][3].symbol = 'O'
     board.rows[:row6][3].is_empty = false
 
-    # require 'pry'; binding.pry
     3.times do
       user_player.add_piece('D')
     end
@@ -164,7 +163,6 @@ describe WinChecker do
     game_status.check_diagonal_wins
     game_status.check_vertical_wins
     game_status.check_horizontal_wins
-    require 'pry'; binding.pry
     expect(game_status.is_a_draw?).to eq("It's a draw!!")
     end
 
