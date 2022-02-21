@@ -38,17 +38,21 @@ attr_reader :rows
     answer
   end
 
-  def is_valid_column?()
-
+  def is_valid_column?(choice)
+    columns.include?(choice.upcase)
   end
 
   def add_piece(symbol, column)
-    column = columns.find_index(column)
-    @rows.reverse.each do |row|
-      if row[column].is_empty?
-        row[column].symbol = symbol
-        break
+    if is_valid_column?(column)
+      column = columns.find_index(column)
+      @rows.reverse.each do |row|
+        if row[column].is_empty?
+          row[column].symbol = symbol
+          break
+        end
       end
+    else
+      "Invalid selection. Please choose from (ABCDEFG)"
     end
   end
 

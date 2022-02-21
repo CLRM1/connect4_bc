@@ -73,6 +73,10 @@ describe Board do
       expect(board.rows[4][0].symbol).to eq("X")
     end
 
+    it 'cannot place a piece in an invalid column' do
+      board = Board.new
+      expect(board.add_piece("X", "Z")).to eq("Invalid selection. Please choose from (ABCDEFG)")
+    end
   end
 
 end
