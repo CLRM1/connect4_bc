@@ -26,12 +26,12 @@ attr_reader :rows
     end
   end
 
-  def menu
-    puts "***Main Menu***"
-    puts " "
-    puts "Enter p to play. Enter q to quit."
-    answer = gets.chomp
-    answer
-  end
+  # def menu
+  #   puts "***Main Menu***"
+  #   puts " "
+  #   puts "Enter p to play. Enter q to quit."
+  #   answer = gets.chomp
+  #   answer
+  # end
 
 end

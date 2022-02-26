@@ -12,10 +12,15 @@ loop do
   computer = Computer.new(board)
   win_checker = WinChecker.new(board, player1, computer)
   turn_counter = 0
-  
+
   puts "Welcome to Connect 4!"
   puts " "
-  answer = board.menu
+  puts "***Main Menu***"
+  puts " "
+  puts "Enter p to play. Enter q to quit."
+  answer = gets.chomp
+  answer
+  # answer = board.menu
   if answer.upcase == 'P'
     puts " "
     puts "Choose a column (ABCDEFG)"

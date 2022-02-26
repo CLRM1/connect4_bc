@@ -1,7 +1,7 @@
 require './lib/board'
 # a Player object needs to be passed the same Board as the Computer and WinChecker.
 class Player
-    attr_accessor :board, :has_won
+  attr_accessor :board, :has_won
 
   def initialize(board)
     @board = board
@@ -12,6 +12,12 @@ class Player
     return @has_won
   end
   # player.add_piece takes an argument of column. this way it can be tested in rspec using player.add_piece('G') or any other column letter.
+
+  # Refactor two player, each with their own instance
+  # def add_piece(column)
+
+
+
   def add_piece(column)
     if column.upcase == 'A'
       column = 0

@@ -4,6 +4,7 @@ class Space
   attr_accessor :is_empty, :symbol
   def initialize
     @is_empty = true
+    # update to value, symbol is a loaded word here (:)
     @symbol = '.'
   end
 
